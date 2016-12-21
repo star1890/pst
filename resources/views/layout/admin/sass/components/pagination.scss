@@ -1,0 +1,44 @@
+/* Pagination */
+ul.pagination{
+	margin: 0px;
+	li{
+		a{
+			border-color: lighten($gray, 50%);	
+			color: lighten($gray, 10%);
+		    padding: 1px 6px;
+		    margin-right: 5px;
+    		font-size: 13px;
+    		background: transparent;
+			@include border-radius(4px);
+			&:hover, &:focus{
+				color: lighten($gray, 10%);
+			}	
+		}
+	}
+	li:first-child{
+		a{
+	    	padding: 1px 8px;
+		}
+	}
+	li:last-child{
+		a{
+	    	padding: 1px 8px;
+	    	margin-right: 0px;
+		}
+	}
+	li.active{
+		a{
+			background: $primaryColor;
+			border-color: $primaryColor;
+			&:hover, &:focus{
+				background: $primaryColor;
+				border-color: $primaryColor;
+			}
+		}
+	}
+	li.more{
+		a{
+			background: darken($primaryColor, 4%);
+		}
+	}
+}

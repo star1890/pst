@@ -1,0 +1,45 @@
+select{
+	&.form-control{
+		background: $white url('../../../assets/backend/images/arrow-select.jpg') no-repeat right;
+		background-size: 40px;
+		border: 1px solid lighten($gray, 50%);
+		color: $gray;
+		font-size: 13px;
+		min-width: 150px;
+		box-shadow: none;
+		height: 40px;
+		margin-bottom: 15px;
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		cursor: pointer;
+		@include border-radius(2px);
+		&.withmargin{
+		    margin-top: 34px;
+		}
+		&.auto{
+			width: auto;
+		}
+	}
+}
+
+.bootstrap-select{
+	width: 100% !important;
+	.btn-default{
+		background-color: $white;
+		color: $gray;
+		text-transform: capitalize;
+		border: 1px solid lighten($gray, 50%);
+	}
+	.dropdown-menu{
+		input[type="text"].form-control{
+			height: 30px;
+			margin-bottom: 0px;
+		}
+		li{
+			a{
+			    padding: 3px 10px;
+			}
+		}
+	}
+}

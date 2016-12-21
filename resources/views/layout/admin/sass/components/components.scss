@@ -1,0 +1,227 @@
+/* label */
+.control-label{
+	text-align: left;
+	font-family: $openSemibold;
+	margin-bottom: 10px;
+	color: $gray;
+	i{
+		color: $gray;
+		margin-right: 5px;
+	}
+}
+
+.control-label.separate{
+	margin: 10px 0 0 0;
+	@media screen and (max-width: 991px){
+		margin: 10px 0 10px 0;
+	}
+}
+
+.control-label.martop{
+	margin-top: 10px;
+}
+
+/* alert */
+.alert{
+	&.alert-danger{
+		border-radius: 2px;
+		border: none;
+	}
+}
+
+/* white panel */
+.white-panel{
+	background: $white;
+	border: 1px solid lighten($gray, 50%);
+	padding: 35px;
+	@include border-radius(2px);
+}
+
+.white-panel.form-wrap{
+	margin-top: 40px;
+	position: relative;
+	span.title{
+		position: absolute;
+	    top: -9px;
+	    left: 30px;
+	    font-size: 12px;
+	    background: #fff;
+	    padding: 0 10px;
+	}	
+	.form-group:last-child{
+		margin-bottom: 0px;
+		@media screen and (max-width: 768px){
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.white-panel.with-gray-panel{
+	border-bottom: none;
+	@include border-bottom-left-radius(0px);
+	@include border-bottom-right-radius(0px);
+}
+
+
+/* gray panel */
+.gray-panel{
+	background: lighten($gray, 55%);
+	border: 1px solid lighten($gray, 50%);
+	padding: 30px 40px;
+}
+
+.gray-panel.with-white-panel{
+	@include border-bottom-left-radius(2px);
+	@include border-bottom-right-radius(2px);
+}
+
+
+/* Material Design Icon */
+i{
+	&.mdi{
+		vertical-align: middle;
+	}
+}
+
+/* Flex */
+.flex{
+	display: flex;
+	display: -webkit-flex;
+}
+
+.vcentering{
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+.centeringflex{
+	align-items: center;
+	-webkit-align-items: center;
+	justify-content: center;
+	-webkit-justify-content: center;
+}
+
+.no-flex-sm{
+	@media screen and (max-width: 991px){
+		display: block;
+	}
+}
+
+.no-flex-md{
+	@media screen and (max-width: 1199px){
+		display: block;
+	}
+}
+
+ul.pagination.pull-right{
+	@media screen and (max-width: 991px){
+		float: left !important;
+		clear: left;
+	}
+}
+
+/* google map */
+.map{
+	height: 400px;
+}
+
+/* wrap padding */
+.padding-wrap{
+	padding: 50px;
+}
+
+/* gray paragraph */
+p.gray{
+	color: $gray;
+}
+
+/* notification */
+.notification{
+	background: $gray;
+	padding: 6px 0;
+	margin-bottom: 10px;
+	margin-left: -35px;
+    margin-right: -35px;
+    margin-top: -20px;
+    @media screen and (max-width: 767px){
+    	margin-left: -20px;
+    	margin-right: -20px;
+    }
+	p{
+		margin: 0 0 2px;
+	}
+}
+
+.panel-group{
+	.panel{
+		@include border-radius(2px);
+		.panel-heading{
+			background-color: $gray;
+			color: $white;
+			border-color: $gray;
+			@include border-top-right-radius(2px);
+			@include border-top-left-radius(2px);
+			i{
+				color: $white;
+			}
+			.panel-title{
+			    font-size: 13px;
+			}
+		}
+	}
+}
+
+.thumbnail{
+	display: inline-block;
+	background-size: cover !important;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.thumbnail.small{
+	width: 50px;
+	height: 50px;
+	margin: 0 10px 10px 0;
+	@include border-radius(50%);
+}
+
+.thumbnail.big{
+	width: 100%;
+	height: 200px;
+}
+
+.thumbnail-wrap{
+	position: relative;
+	.control-button{
+		position: absolute;
+	    top: 15px;
+	    right: 15px;
+	}
+}
+
+.uploadheight{
+	height: 36px;
+}
+
+.thumbnail{
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover !important;
+	background-position: center center;
+	width: 100%;
+	border: none;
+	min-height: 150px;
+	@include border-radius(0px);
+	button{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		padding: 5px 10px;
+	}
+}
+
+.tree-wrap{
+	input[type="text"]{
+		margin-bottom: 0px !important;
+	}
+}

@@ -1,0 +1,83 @@
+.nav-tabs{
+	border: 1px solid lighten($gray, 50%);
+	border-left: none;
+	background: lighten($gray, 55%);
+	li{
+		margin-top: -1px;
+		@media screen and (max-width: 991px){
+			width: 100%;
+		}
+		a{
+			margin-right: 0px;
+			background: lighten($gray, 55%);
+			border: 1px solid lighten($gray, 50%);
+			color: $gray;
+			font-family: $openSemibold;
+			padding: 20px 25px;
+			@include border-radius(0px);
+			@include transition(all, 0.3s, ease);
+			@media screen and (max-width: 991px){
+				border-right: none;
+			}
+			&:hover, &:focus{
+				border-color: lighten($gray, 50%);
+				background-color: lighten($gray, 57%);
+			}
+		}
+	}
+	li.active{
+		a{
+			background: $white;
+			border: 1px solid lighten($gray, 50%);
+			border-bottom-color: transparent;
+			@media screen and (max-width: 991px){
+				border-right: none;
+			}
+			&:focus, &:hover{
+				@media screen and (max-width: 991px){
+					border-right: none;
+				}
+			}
+		}
+	}
+	li + li{
+		margin-left: -1px;
+		@media screen and (max-width: 991px){		
+			margin-left: 0;
+		}
+	}
+}
+
+.tab-content{
+	.tab-pane{
+		border: 1px solid lighten($gray, 50%);
+		border-top: none;
+		padding: 25px;
+		background: $white;
+		@media screen and (max-width: 640px){
+			padding: 20px;
+		}
+		p.small{
+			@media screen and (max-width: 991px){
+				float: left !important;
+			}
+			@media screen and (max-width: 767px){
+				float: right !important;
+			}
+			@media screen and (max-width: 640px){
+				float: left !important;
+			}
+		}
+		.white-panel, .gray-panel{
+			border-top: none;
+			border-left: none;
+			border-right: none;
+		}
+		.white-panel.noborder{
+			border: none;
+		}
+		.dark-panel{
+			border: none;
+		}
+	}
+}

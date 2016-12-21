@@ -1,0 +1,110 @@
+// sidebar style
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 220px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    margin-left: -220px;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    background: $primaryColor;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    @media screen and (min-width:768px) {
+	    width: 220px;
+	}
+    .primary-menu {
+    	@extend .fullwidth;
+        width: 220px;
+    	border: 0;
+    	padding-bottom: 20px;
+    	h2 {
+            font-family: 'open_sanslight';
+            font-size: 20px;
+            color: $white;
+            padding-left: 15px;
+            margin-bottom: 17px;
+        }
+    	ul {
+            margin: 0;
+            padding: 0;
+            li {    
+                font-family: $openRegular;
+                font-size: 13px;
+                text-transform: none;
+                color: $white;
+                list-style-type: none;
+                a {
+                    @extend .fullwidth;
+                    padding: 13px 15px;
+                    color: rgba(255, 255, 255, 0.7);
+                    border: 0;
+                    @include transition(all, 0.3s, ease);
+                    i {
+                        color: rgba(255, 255, 255, 0.7);
+                        vertical-align: top;
+                        margin-right: 15px;
+                        font-size: 15px;
+                    }
+                    .badge {
+                        background: $secondColor;
+                        font-size: 11px;
+                        font-weight: normal;
+                    }
+                    &:hover, &:focus {
+                        border: 0;
+                        color: $white;
+                        i {
+                            color: $white;
+                        }
+                    }
+                }
+                .active {
+                    background: lighten($primaryColor, 10%);
+                    border: 0;
+                    @include transition(all, 0.3s, ease);
+                    color: $white;
+                    i {
+                        color: $white;
+                    }
+                    &:hover, &:focus {
+                        background: lighten($primaryColor, 10%);
+                        border: 0;
+                        color: $white;
+                        i {
+                            color: $white;
+                        }
+                    }
+                }
+                .push-bottom {
+                    @extend .fullwidth;
+                    background: #252525;
+                    ul {
+                        li {
+                            a {
+                                border: 0;
+                                @include transition(all, 0.3s, ease);
+                                &:hover, &:focus {
+                                    border: 0;
+                                }
+                            }
+                            .active {
+                               background: lighten($primaryColor, 10%);
+                                border: 0;
+                                &:hover, &:focus {
+                                    background: lighten($primaryColor, 10%);
+                                    border: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

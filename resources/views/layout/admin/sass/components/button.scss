@@ -1,0 +1,258 @@
+/* button */
+.btn-primary{
+	background: $thirdColor;
+	border: none;
+	@include border-radius(2px);
+	padding: 8px 15px;
+	font-size: 12px;
+	text-transform: none;
+	@include transition(all, 0.3s, ease);
+	i{	
+	    color: $white;
+	}
+	&:hover, &:focus{
+		background: lighten($thirdColor, 10%);
+		i{
+			color: $white;
+		}
+	}
+}
+
+.btn-del {
+	background: $secondColor;
+	border: none;
+	@include border-radius(2px);
+	padding: 8px 15px;
+	font-size: 12px;
+	text-transform: none;
+	color: $white;
+	@include transition(all, 0.3s, ease);
+	i{	
+	    color: $white;
+	}
+	&:hover, &:focus{
+		color: $white;
+		background: lighten($secondColor, 10%);
+		i{
+			color: $white;
+		}
+	}
+}
+
+.btn-preview {
+	background: $thirdColor;
+	border: none;
+	@include border-radius(2px);
+	padding: 8px 15px;
+	font-size: 12px;
+	text-transform: none;
+	color: $white;
+	@include transition(all, 0.3s, ease);
+	i{	
+	    color: $white;
+	}
+	&:hover, &:focus{
+		color: $white;
+		background: lighten($thirdColor, 10%);
+		i{
+			color: $white;
+		}
+	}
+}
+
+.btn-success{
+	background: $green;
+	border: none;	
+	@include border-radius(2px);
+	padding: 8px 15px;
+	font-size: 12px;
+	text-transform: none;
+	@include transition(all, 0.3s, ease);
+	&:hover, &:focus{
+		background: lighten($green, 10%);
+	}
+}
+
+.btn-success[disabled]{
+	background: lighten($green, 10%);	
+}
+
+.btn-default{
+	background: $gray;
+	border: none;
+	@include border-radius(2px);
+	padding: 8px 15px;
+	color: $white;
+	font-size: 12px;
+	text-transform: none;
+	@include transition(all, 0.3s, ease);
+	&:hover, &:focus{
+		background: lighten($gray, 10%);
+		color: $white;
+	}
+	&.transparent{
+		background: transparent;
+		border-color: transparent;
+		color: $gray;
+		&:hover, &:focus{
+			bacgkround: transparent;
+			border-color: transparent;
+			color: $gray;
+			box-shadow: none;
+		}
+	}
+}
+
+.btn-danger{
+	background: $red;
+	border: none;
+	@include border-radius(2px);
+	padding: 8px 15px;
+	color: $white;
+	font-size: 12px;
+	text-transform: none;
+	@include transition(all, 0.3s, ease);
+	&:hover, &:focus{
+		background: lighten($red, 10%);
+		color: $white;
+	}
+}
+
+.btn-bold{
+	font-family: $openSemibold;
+}
+
+.btn-light {
+	background: lighten($gray, 60%);
+	border: 0;
+	font-family: $openSemibold;
+	font-size: 12px;
+	color: $gray;
+	i { 
+		vertical-align: text-bottom;
+		font-size: 15px;
+	}
+}
+
+.btn-search{
+	border: none;
+	color: $white;
+	background: $thirdColor;
+    padding: 2px 4px;
+    margin-bottom: 5px;
+	@include border-radius(2px);
+	@include transition(all, 0.3s, ease);
+	i{
+		font-size: 14px;
+		color: $white;
+		vertical-align: top;
+	}
+	&:hover, &:focus{
+		background: lighten($thirdColor, 10%);
+		i{
+			color: $white;	
+		}
+	}
+}
+
+.btn-edit{
+	border: none;
+	color: $white;
+	background: $fourColor;	
+    padding: 2px 4px;
+    margin-bottom: 5px;
+	@include border-radius(2px);
+	@include transition(all, 0.3s, ease);
+	@-moz-document url-prefix() {
+		padding: 4px 5px 0px 4px;
+	}
+	i{
+		font-size: 14px;
+		color: $white;
+		vertical-align: top;
+	}
+	&:hover, &:focus{
+		background: darken($fourColor, 10%);
+		i{
+			color: $white;	
+		}
+	}
+	&.inverse{
+		background: $fourColor;
+		i{
+			color: $white;
+		}
+		&:hover, &:focus{
+			background: lighten($fourColor, 5%);
+		}
+	}
+}
+
+.btn-delete{
+	border: none;
+	color: $white;
+	background: $secondColor;	
+    padding: 4px 5px 0px 5px;
+    margin-bottom: 5px;
+	@include border-radius(2px);
+	@include transition(all, 0.3s, ease);
+	@-moz-document url-prefix() {
+		padding: 4px 6px 0px 6px;
+	}
+	i{
+		font-size: 14px;
+		color: $white;
+		vertical-align: top;
+	}
+	&:hover, &:focus{
+		background: darken($secondColor, 10%);
+		i{
+			color: $white;	
+		}
+	}
+	&.inverse{
+		background: $secondColor;
+		i{
+			color: $white;
+		}
+		&:hover, &:focus{
+			background: lighten($secondColor, 5%);
+		}
+	}
+}
+
+.btn-detail{
+	border: none;
+	color: $white;
+	background: $gray;	
+    padding: 2px 5px 2px 4px;
+    margin-bottom: 5px;
+	@include border-radius(2px);
+	@include transition(all, 0.3s, ease);
+	@-moz-document url-prefix() {
+		padding: 3px 5px 1px 4px;
+	}
+	i{
+		font-size: 16px;
+		color: $white;
+		vertical-align: top;
+	}
+	&:hover, &:focus{
+		background: darken($gray, 10%);
+		i{
+			color: $white;	
+		}
+	}
+}
+				
+/* add margin */
+.addmargin{
+	margin-top: 32px;
+}
+.addmargin-right{
+	margin-right: 10px;
+}
+
+.btn-small{
+	padding: 5px 9px;
+}

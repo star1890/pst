@@ -1,0 +1,102 @@
+.wrapper-login {    
+	min-height: 100%;
+    position: relative;
+    right: 0px;
+	&.login{
+		display: flex;
+		display: -webkit-flex;
+		align-items: center;
+		-webkit-align-items: center;
+		justify-content: center;
+		-webkit-justify-content: center;
+		background-image: url('../assets/images/bg-login.jpg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		overflow: hidden;
+	}
+}
+
+.login-block{
+	padding: 30px 30px 30px 0;
+	background-color: $white;
+	width: 900px;
+	@media screen and (max-width: 991px){
+		padding: 30px;
+		width: 400px;
+	}
+	@media screen and (max-width: 767px){
+		padding: 30px 20px;
+	}
+	@media screen and (max-width: 424px){
+		width: 300px;
+		padding: 10px;
+	}
+	img{
+		width: 57px;
+		margin-bottom: 10px;
+		@media screen and (max-width: 991px){
+			margin: 0 auto;
+		}
+	}
+	h4{
+		color: $darkGray;
+		width: 100%;    
+		line-height: 1.5;
+		text-align: center;
+		margin: 0px 0 5px 0;
+		@media screen and (max-width: 991px){
+			text-align: center;
+		}
+	}
+	h5{
+		color: $darkGray;
+		width: 100%;
+		text-align: center;
+		opacity: 0.5;
+		margin-bottom: 40px;
+		text-transform: uppercase;
+		@media screen and (max-width: 991px){
+			text-align: center;
+		}
+		@media screen and (max-width: 424px){
+			margin-bottom: 20px;
+		}
+	}
+	a{
+		font-size: 14px;
+		color: $gray;
+		margin-top: 15px;
+	}
+	.login-form{
+		position: relative;
+		&:before{
+			content: "";
+			position: absolute;
+			top: -30px;
+			bottom: -30px;
+			left: -30px;
+			right: -30px;
+			z-index: 1;
+			background: lighten($gray, 60%);
+			@media screen and (max-width: 991px){
+				left: -30px;
+				right: -30px;
+			}
+			@media screen and (max-width: 767px){
+				left: -20px;
+				right: -20px;
+			}
+			@media screen and (max-width: 424px){
+				top: -10px;
+				bottom: -10px;
+				left: -10px;
+				right: -10px;
+			}
+		}
+		.alert, form{
+			z-index: 2;
+			position: relative;
+		}
+	}
+}

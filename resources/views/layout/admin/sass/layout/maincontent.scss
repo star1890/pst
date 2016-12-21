@@ -1,0 +1,148 @@
+body {
+	background: #eef3f4;
+    color: $gray;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @media screen and (max-width: 991px){
+        overflow-x: hidden;
+    }
+}
+
+#wrapper {
+	padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 220px;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 220px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -220px;
+}
+
+@media screen and (min-width:768px) {
+    
+}
+
+#wrap-content {
+    padding-right: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrap-content.toggled {
+    padding-right: 220px;
+}
+
+#wrap-content.nosidebar {
+    padding-right: 0px;
+}
+
+#main-content {
+    width: 100%;
+    position: absolute;
+}
+
+#wrap-content.toggled #main-content {
+    position: absolute;
+    margin-left: -220px;
+}
+
+.indent {
+	padding: 75px 35px 20px 35px;
+	@media screen and (max-width: 768px) {
+		padding: 80px 20px 20px 20px;
+	}
+}
+
+.toolbar {
+	@extend .fullwidth;
+	margin-top: 60px;
+	.pull-right {
+		background: $gray;
+		a {
+			padding: 5px 6px 2px 5px;
+    		float: left;
+    		i {
+				color: $white;
+			}
+		}
+	}
+}   
+
+a {
+    i {
+        color: $gray;
+    }
+    &:hover, &:focus {
+    	text-decoration: none;
+    	outline: none;
+        i {
+            color: lighten($gray, 10%); 
+        }
+    }
+}
+
+@media(min-width:768px) {
+	#wrapper {
+        padding-left: 220px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+
+    #wrap-content {
+        padding-right: 220px;
+    }
+
+    #wrap-content.toggled {
+        padding-right: 0;
+    }
+
+    #sidebar-right {
+        width: 220px;
+    }
+
+    #wrap-content.toggled #sidebar-right {
+        width: 0;
+    }
+
+    #main-content {
+        position: relative;
+    }
+
+    #wrap-content.toggled #main-content {
+        position: relative;
+        margin-left: 0;
+    }
+}

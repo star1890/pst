@@ -1,0 +1,27 @@
+/* breadcrumb */
+.breadcrumb{
+	padding: 10px 0;
+	background-color: transparent;
+	border: 0;
+	@include border-radius(0px);
+	@media screen and (max-width: 768px){
+		margin-top: 0px;
+	}
+	li{
+		a{
+			color: $gray;
+			font-family: $openSemibold;
+		}
+	}
+	li.active{
+		a{
+			color: $gray;
+			font-weight: normal;
+		}
+	}
+	li+li:before{
+		content: "\f105";
+		color: $gray;
+		font: normal normal normal 14px/1 FontAwesome; 
+	}
+}

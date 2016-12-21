@@ -1,0 +1,41 @@
+/* VENDORS COMPONENTS */
+@import "vendors/bootstrap/bootstrap";
+
+/* CUSTOM SITE HELPERS */
+@import "helpers/variables.scss";
+@import "helpers/mixins.scss";
+@import "helpers/helpers.scss";
+
+/* BASE STYLESHEET AND RESETTER */
+@import "base/reset.scss";
+@import "base/base.scss";
+
+/* CUSTOM SITE COMPONENTS */
+@import "components/components.scss";
+@import "components/input.scss";
+@import "components/button.scss";
+@import "components/select.scss";
+@import "components/tab.scss";
+@import "components/table.scss";
+@import "components/modal.scss";
+@import "components/loader.scss";
+@import "components/chart.scss";
+@import "components/head-component.scss";
+@import "components/breadcrumb.scss";
+@import "components/pagination.scss";
+@import "components/calendar.scss";
+
+/* MAIN SITE REGIONS */
+@import "layout/header.scss";
+@import "layout/footer.scss";
+@import "layout/maincontent.scss";
+@import "layout/sidebar.scss";
+@import "layout/dashboard.scss";
+
+/* PAGE COMPONENTS */
+@import "pages/login.scss";
+@import "pages/smart-components.scss";
+
+/* ICON FONT MATERIAL */
+@import "material-design-font-icon.scss";
+
